@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATPI Asia Market Overview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">ATPI</h1>
+                <h2 class="subtitle">
+                    <i class="fas fa-globe-asia icon-header" aria-hidden="true"></i>
+                    Asia Market Overview
+                </h2>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <div class="container">
+            <div class="nav-buttons">
+                <button id="marketOverviewBtn" class="nav-btn active">
+                    <i class="fas fa-chart-bar icon-nav" aria-hidden="true"></i>
+                    Market Overview
+                </button>
+                <button id="businessIntelBtn" class="nav-btn">
+                    <i class="fas fa-brain icon-nav" aria-hidden="true"></i>
+                    Business Intelligence
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Market Overview Section -->
+            <section id="marketOverview" class="view-section active">
+                <div class="section-header">
+                    <h3>
+                        <i class="fas fa-chart-line icon-section" aria-hidden="true"></i>
+                        Market Overview
+                    </h3>
+                    <p class="section-description">Comprehensive operational metrics and rankings across Asia markets</p>
+                </div>
+                <div class="table-container">
+                    <table class="data-table" id="marketOverviewTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <i class="fas fa-flag icon-th" aria-hidden="true"></i>
+                                    Country
+                                </th>
+                                <th>
+                                    <i class="fas fa-chart-bar icon-th" aria-hidden="true"></i>
+                                    GDP Rank
+                                </th>
+                                <th>
+                                    <i class="fas fa-trophy icon-th" aria-hidden="true"></i>
+                                    ATPI Rank
+                                </th>
+                                <th>
+                                    <i class="fas fa-star icon-th" aria-hidden="true"></i>
+                                    DTA Potential
+                                </th>
+                                <th>
+                                    <i class="fas fa-building icon-th" aria-hidden="true"></i>
+                                    Corporate
+                                </th>
+                                <th>
+                                    <i class="fas fa-ship icon-th" aria-hidden="true"></i>
+                                    Marine
+                                </th>
+                                <th>
+                                    <i class="fas fa-bolt icon-th" aria-hidden="true"></i>
+                                    Energy
+                                </th>
+                                <th>
+                                    <i class="fas fa-pickaxe icon-th" aria-hidden="true"></i>
+                                    Mining
+                                </th>
+                                <th>
+                                    <i class="fas fa-graduation-cap icon-th" aria-hidden="true"></i>
+                                    Student
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="marketOverviewBody">
+                            <!-- Data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Business Intelligence Section -->
+            <section id="businessIntel" class="view-section">
+                <div class="section-header">
+                    <h3>
+                        <i class="fas fa-brain icon-section" aria-hidden="true"></i>
+                        Business Intelligence
+                    </h3>
+                    <p class="section-description">Market analysis, systems, and travel commentary insights</p>
+                </div>
+                <div class="table-container">
+                    <table class="data-table" id="businessIntelTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <i class="fas fa-flag icon-th" aria-hidden="true"></i>
+                                    Country
+                                </th>
+                                <th>
+                                    <i class="fas fa-plane icon-th" aria-hidden="true"></i>
+                                    OBT
+                                </th>
+                                <th>
+                                    <i class="fas fa-network-wired icon-th" aria-hidden="true"></i>
+                                    GDS
+                                </th>
+                                <th>
+                                    <i class="fas fa-crystal-ball icon-th" aria-hidden="true"></i>
+                                    Avenir
+                                </th>
+                                <th>
+                                    <i class="fas fa-file-alt icon-th" aria-hidden="true"></i>
+                                    Business Travel Commentary
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="businessIntelBody">
+                            <!-- Data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <i class="fas fa-copyright icon-footer" aria-hidden="true"></i>
+                2025 ATPI. All rights reserved. | Executive Market Analysis
+                <span class="footer-actions">
+                    <i class="fas fa-print icon-footer" aria-hidden="true" title="Print"></i>
+                    <i class="fas fa-download icon-footer" aria-hidden="true" title="Export"></i>
+                </span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Ensure Font Awesome loads before proceeding
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add a fallback check for Font Awesome
+            const testIcon = document.createElement('i');
+            testIcon.className = 'fas fa-star';
+            testIcon.style.display = 'none';
+            document.body.appendChild(testIcon);
+            
+            // Check if Font Awesome loaded
+            const computedStyle = window.getComputedStyle(testIcon, '::before');
+            if (computedStyle.content === 'none' || computedStyle.content === '') {
+                console.warn('Font Awesome may not have loaded properly');
+            }
+            
+            document.body.removeChild(testIcon);
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
