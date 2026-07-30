@@ -1,13 +1,12 @@
 # ATPI Webpage
 
-A simple, responsive personal webpage built for my sister to showcase her ATPI-related work, achievements, and contact information.
+A simple, responsive personal webpage built for my sister to showcase her ATPI-related work.
 
 ## Features
 
 - Clean single-page layout focused on her profile and key information
 - Separate HTML, CSS, and JavaScript files for structure, styling, and interactivity
 - Mobile-friendly design that works across phones, tablets, and laptops
-- Easy to extend with new sections (projects, awards, portfolio pieces)
 
 ## Tech Stack
 
